@@ -32,7 +32,7 @@ class TripItem extends Component {
         event.preventDefault();
 
         await axios.post(
-            "http://localhost:4567/users/1/trips",
+            "https://trip-plan-ga.herokuapp.com/users/1/trips",
             {
                 name: this.state.name,
                 category: this.state.category,
