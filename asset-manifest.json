@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/TripPlan_FrontEnd/static/css/main.ff463f21.chunk.css",
+    "main.js": "/TripPlan_FrontEnd/static/js/main.5175d09b.chunk.js",
+    "main.js.map": "/TripPlan_FrontEnd/static/js/main.5175d09b.chunk.js.map",
+    "runtime~main.js": "/TripPlan_FrontEnd/static/js/runtime~main.42097ed6.js",
+    "runtime~main.js.map": "/TripPlan_FrontEnd/static/js/runtime~main.42097ed6.js.map",
+    "static/css/2.d69aec2e.chunk.css": "/TripPlan_FrontEnd/static/css/2.d69aec2e.chunk.css",
+    "static/js/2.37020652.chunk.js": "/TripPlan_FrontEnd/static/js/2.37020652.chunk.js",
+    "static/js/2.37020652.chunk.js.map": "/TripPlan_FrontEnd/static/js/2.37020652.chunk.js.map",
+    "index.html": "/TripPlan_FrontEnd/index.html",
+    "precache-manifest.16cfe6fdf61a46456f13cae701e135da.js": "/TripPlan_FrontEnd/precache-manifest.16cfe6fdf61a46456f13cae701e135da.js",
+    "service-worker.js": "/TripPlan_FrontEnd/service-worker.js",
+    "static/css/2.d69aec2e.chunk.css.map": "/TripPlan_FrontEnd/static/css/2.d69aec2e.chunk.css.map",
+    "static/css/main.ff463f21.chunk.css.map": "/TripPlan_FrontEnd/static/css/main.ff463f21.chunk.css.map",
+    "static/media/semantic.min.css": "/TripPlan_FrontEnd/static/media/outline-icons.ef60a4f6.woff"
+  }
+}
