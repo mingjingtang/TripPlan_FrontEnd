@@ -37,12 +37,12 @@ class App extends Component {
 
   componentDidMount = async () => {
     //get places data
-    const places = await axios.get('https://trip-plan-ga.herokuapp.com/allplaces');
+    const places = await axios.get('http://localhost:4567/allplaces');
     console.log(places)
     this.setState({ placesData: places.data, apiDataLoaded: true });
-
+    
     //get trips data
-    const trips = await axios.get('https://trip-plan-ga.herokuapp.com/users/1/trips');
+    const trips = await axios.get('http://localhost:4567/users/1/trips');
     console.log(trips)
     this.setState({ tripsData: trips.data, apiDataLoadedTrips: true });
   }
@@ -56,7 +56,7 @@ class App extends Component {
     event.preventDefault()
 
     await axios.delete(
-      `https://trip-plan-ga.herokuapp.com/users/1/trips/${id}`
+      `http://localhost:4567/users/1/trips/${id}`
     )
     this.rerenderStuff()
   }
@@ -66,7 +66,7 @@ class App extends Component {
     event.preventDefault()
 
     await axios.put(
-      `https://trip-plan-ga.herokuapp.com/users/1/trips/${id}`, data)
+      `http://localhost:4567/users/1/trips/${id}`, data)
     this.rerenderStuff()
   }
 
@@ -81,7 +81,7 @@ class App extends Component {
 
   rerenderStuff = async () => {
     let getTripData = await axios.get(
-      `https://trip-plan-ga.herokuapp.com/users/1/trips/`
+      `http://localhost:4567/users/1/trips/`
     )
     this.setState({
       tripsData: getTripData.data
@@ -91,7 +91,7 @@ class App extends Component {
 
   rerenderTrip = async (tripId) =>{
     let getTripData = await axios.get(
-      `https://trip-plan-ga.herokuapp.com/users/1/trips/${tripId}/places`
+      `http://localhost:4567/users/1/trips/${tripId}/places`
     )
     this.setState(prevState => ({
       allTrip: [...prevState.allTrip, getTripData]
@@ -105,7 +105,7 @@ class App extends Component {
       console.log(tripId)
     
       const placeUnderTrips =await axios.get(
-        `https://trip-plan-ga.herokuapp.com/users/1/trips/${tripId}/places`)
+        `http://localhost:4567/users/1/trips/${tripId}/places`)
   
       this.rerenderTrip(tripId)
 
@@ -118,7 +118,7 @@ class App extends Component {
     console.log("newPlace is " + newPlace)
     
     await axios.post(
-      `https://trip-plan-ga.herokuapp.com/users/1/trips/${tripId}/places`,newPlace)
+      `http://localhost:4567/users/1/trips/${tripId}/places`,newPlace)
  
     this.rerenderTrip(tripId)
   }
@@ -130,7 +130,7 @@ class App extends Component {
     console.log(placeId)
 
     await axios.delete(
-      `https://trip-plan-ga.herokuapp.com/users/1/trips/${tripId}/places/${placeId}`
+      `http://localhost:4567/users/1/trips/${tripId}/places/${placeId}`
     )
 
     this.rerenderTrip(tripId)
